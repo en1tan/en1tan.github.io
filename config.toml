@@ -1,0 +1,5 @@
+baseURL = 'https://enitan.github.io'
+languageCode = 'en-us'
+title = "TPriest's Weird Blog"
+paginate = 6
+theme = "hello-friend-ng"
