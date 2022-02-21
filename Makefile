@@ -9,9 +9,9 @@ help: ## Show this help
 
 entry: ## Launch $EDITOR with a new entry with TITLE=
 	@if ! [ -d "./content/" ]; then mkdir content/; fi
-	@if ! [ -d "./content/junks/" ]; then mkdir content/junks/; fi
-	@printf '%b\n' "---\ntitle: $(TITLE) \ndate: $(DATEOF) \ncategories: [\"note\"] \ntags: \n---\n\n" > content/junks/$(DATEOF)-$(shell printf "%q" "$(TITLE)").md
-	$(EDITOR) ./content/junks/$(DATEOF)-$(shell printf "%q" "$(TITLE)").md
+	@if ! [ -d "./content/posts/" ]; then mkdir content/posts/; fi
+	@printf '%b\n' "---\ntitle: $(TITLE) \ndate: $(DATEOF) \ncategories: [\"note\"] \ntags: \n---\n\n" > content/posts/$(DATEOF)-$(shell printf "%q" "$(TITLE)").md
+	# $(EDITOR) ./content/junks/$(DATEOF)-$(shell printf "%q" "$(TITLE)").md
 
 dev: ## Run the local development server
 	hugo serve --enableGitInfo --disableFastRender --environment development
